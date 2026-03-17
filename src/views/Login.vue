@@ -185,6 +185,7 @@ export default {
         confirmarSenha: '',
       }
     },
+    // No Login.vue, o handleLogin já está perfeito:
     handleLogin() {
       const usuario = "admin"
       const senha = "123456"
@@ -193,11 +194,8 @@ export default {
         this.loginForm.usuario === usuario &&
         this.loginForm.senha === senha
       ) {
-
         localStorage.setItem("auth", "true")
-
         this.$router.push('/categorias')
-
       } else {
         alert("Usuário ou senha inválidos")
       }
